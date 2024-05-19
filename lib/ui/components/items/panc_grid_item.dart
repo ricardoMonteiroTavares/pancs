@@ -22,17 +22,18 @@ class PancGridItem extends StatelessWidget {
           width: double.infinity, 
           height: 130,
         ),
-        Container(
-          padding: padding['defaultVertical'],
-          width: double.infinity,
-          child: CustomText(
-            text: title, 
-            maxLines: 2, 
-            color: colors['primary'],
-            textAlign: TextAlign.left,
+        Expanded(
+          child: Container(
+            padding: padding['defaultVertical'],
+            width: double.infinity,
+            child: CustomText(
+              text: title, 
+              maxLines: 2, 
+              color: colors['primary'],
+              textAlign: TextAlign.left,
+            ),
           ),
-        )
-        
+        ),
       ],
     );
   }

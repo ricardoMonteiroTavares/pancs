@@ -23,16 +23,17 @@ class PancListItem extends StatelessWidget {
             height: 45, 
             width: 45,
           ),
-          Container(
-            padding: padding['default'],
-            child: CustomText(
-              text: title, 
-              maxLines: 1, 
-              color: colors['primary'],
-              textAlign: TextAlign.left,
+          Expanded(
+            child: Container(
+              padding: padding['default'],
+              child: CustomText(
+                text: title, 
+                maxLines: 1, 
+                color: colors['primary'],
+                textAlign: TextAlign.left,
+              ),
             ),
-          )
-          
+          ),
         ],
       ),
     );
