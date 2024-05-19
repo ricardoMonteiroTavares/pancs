@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:pancs/ui/components/bars/custom_app_bar.dart';
 import 'package:pancs/ui/components/items/panc_grid_item.dart';
+import 'package:pancs/ui/components/layout/custom_scaffold.dart';
 import 'package:pancs/ui/components/layout/panc_grid.dart';
-import 'package:pancs/ui/components/texts/app_bar_title.dart';
-import 'package:pancs/ui/theme.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const AppBarTitle(title: "Panc's",),
-        backgroundColor: colors['background'],
-        surfaceTintColor: colors['background'],
-        elevation: 0,
+    return const CustomScaffold(
+      appBar: CustomAppBar(
+        title: "Panc's",
+        actions: [
+          IconButton(
+            onPressed: null, 
+            icon: Icon(Icons.menu)
+          )
+        ],
       ),
-
-      body: const PancGrid(
+      body: PancGrid(
           items: [
             PancGridItem(
               imageUrl: 'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg',

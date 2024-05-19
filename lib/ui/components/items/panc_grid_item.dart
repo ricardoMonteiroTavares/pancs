@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pancs/ui/components/images/rounded_image.dart';
 import 'package:pancs/ui/components/texts/custom_text.dart';
-import 'package:pancs/ui/theme.dart';
+import 'package:pancs/ui/theme/colors.dart';
+import 'package:pancs/ui/theme/padding.dart';
 
 class PancGridItem extends StatelessWidget {
   final String title;
@@ -24,12 +25,12 @@ class PancGridItem extends StatelessWidget {
         ),
         Expanded(
           child: Container(
-            padding: padding['defaultVertical'],
+            padding: PaddingTheme.defaultVertical,
             width: double.infinity,
             child: CustomText(
               text: title, 
               maxLines: 2, 
-              color: colors['primary'],
+              color: ColorTheme.primary,
               textAlign: TextAlign.left,
             ),
           ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pancs/ui/components/items/panc_list_item.dart';
-import 'package:pancs/ui/theme.dart';
+import 'package:pancs/ui/theme/padding.dart';
 
 class PancList extends StatelessWidget {
   final List<PancListItem> items;
@@ -9,7 +9,7 @@ class PancList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: padding['default'],
+      padding: PaddingTheme.defaultAll,
       children: items,
     );
   }

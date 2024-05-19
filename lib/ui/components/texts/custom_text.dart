@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class CustomText extends StatelessWidget {
   final String text;
   final int? maxLines;
+  final double? fontSize;
   final TextAlign? textAlign;
   final Color? color;
 
@@ -11,6 +12,7 @@ class CustomText extends StatelessWidget {
     super.key, 
     required this.text,
     this.maxLines,
+    this.fontSize,
     this.textAlign,
     this.color,
   });
@@ -23,6 +25,7 @@ class CustomText extends StatelessWidget {
       overflow: TextOverflow.ellipsis,
       style: GoogleFonts.aBeeZee(
         color: color,
+        fontSize: fontSize,
       ),
       textAlign: textAlign,
     );

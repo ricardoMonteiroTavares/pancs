@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pancs/ui/theme.dart';
+import 'package:pancs/ui/theme/border_radius.dart';
 
 class RoundedImage extends StatelessWidget {
   final double? width;
@@ -10,7 +10,7 @@ class RoundedImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: borderRadius['default'],
+      borderRadius: BorderRadiusTheme.defaultAll,
       child: Image.network(
         imageUrl, 
         width: width,

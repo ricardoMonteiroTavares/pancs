@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pancs/ui/components/images/rounded_image.dart';
 import 'package:pancs/ui/components/texts/custom_text.dart';
-import 'package:pancs/ui/theme.dart';
+import 'package:pancs/ui/theme/colors.dart';
+import 'package:pancs/ui/theme/padding.dart';
 
 class PancListItem extends StatelessWidget {
   final String title;
@@ -15,7 +16,7 @@ class PancListItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: padding['default'],
+      padding: PaddingTheme.defaultAll,
       child: Row(
         children: [
           RoundedImage(
@@ -25,11 +26,12 @@ class PancListItem extends StatelessWidget {
           ),
           Expanded(
             child: Container(
-              padding: padding['default'],
+              padding: PaddingTheme.defaultAll,
               child: CustomText(
                 text: title, 
+                fontSize: 20,
                 maxLines: 1, 
-                color: colors['primary'],
+                color: ColorTheme.primary,
                 textAlign: TextAlign.left,
               ),
             ),

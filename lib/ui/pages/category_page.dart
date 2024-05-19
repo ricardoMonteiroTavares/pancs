@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pancs/ui/components/bars/custom_app_bar.dart';
 import 'package:pancs/ui/components/items/panc_list_item.dart';
+import 'package:pancs/ui/components/layout/custom_scaffold.dart';
 import 'package:pancs/ui/components/layout/panc_list.dart';
-import 'package:pancs/ui/components/texts/app_bar_title.dart';
 
 class CategoryPage extends StatelessWidget {
   final String categoryTitle;
@@ -9,9 +10,9 @@ class CategoryPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: AppBarTitle(title: categoryTitle),
+    return CustomScaffold(
+      appBar: CustomAppBar(
+        title:categoryTitle,
         centerTitle: true,
       ),
 

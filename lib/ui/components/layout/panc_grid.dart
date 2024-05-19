@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pancs/ui/components/items/panc_grid_item.dart';
-import 'package:pancs/ui/theme.dart';
+import 'package:pancs/ui/theme/padding.dart';
 
 class PancGrid extends StatelessWidget {
   final List<PancGridItem> items;
@@ -14,7 +14,7 @@ class PancGrid extends StatelessWidget {
         mainAxisSpacing: 10,
         crossAxisSpacing: 10,
       ),
-      padding: padding['default'],
+      padding: PaddingTheme.defaultAll,
       children: items,
     );
   }
